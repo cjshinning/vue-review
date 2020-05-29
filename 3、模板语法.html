@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模板语法</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <!-- 插值 -->
+    <!-- <section>
+        <div id="app">
+            <p>Using mustaches: {{rawHtml}}</p>
+            <p>Using v-html directive: <span v-html="rawHtml"></span></p>
+        </div>
+    
+        <script>
+            var vm = new Vue({
+                el: '#app',
+                data: {
+                    rawHtml: '<span style="color: red">This show be red;</span>'
+                }
+            })
+            // 动态渲染任意的HTML容易导致xss攻击
+        </script>
+    </section> -->
+
+    <!-- <section>
+        <div id="app">
+            <div v-bind:id="dynamicId"></div>
+        </div>
+        <script>
+            var vm = new Vue({
+                el: '#app',
+                data: {
+                    dynamicId: '123'
+                }
+            })
+        </script>
+    </section> -->
+
+    <!-- <section>
+        <div id="app">
+            <div>{{number+1}}</div>
+            <div>{{ok ? 'YES' : 'NO'}}</div>
+            <div>{{ message.split('').reverse().join('') }}</div>
+        </div>
+        <script>
+            var vm = new Vue({
+                el: '#app',
+                data: {
+                    number: 100,
+                    ok: true,
+                    message: 'Hello Vue.js'
+                }
+            })
+        </script>
+    </section> -->
+
+    <!-- 指令 -->
+    <!-- <section>
+        <div id="app">
+            <p v-if="seen">现在你看到我了</p>
+            <a v-bind:href="url">我是链接</a>
+            <a href="javascript:;" v-on:click="doSomething">点击我</a>
+        </div>
+        <script>
+            var vm = new Vue({
+                el: '#app',
+                data: {
+                    seen: true,
+                    url: 'www.baidu.com'
+                },
+                methods: {
+                    doSomething(){
+                        console.log(1)
+                    }
+                }
+            })
+        </script>
+    </section> -->
+</body>
+</html>

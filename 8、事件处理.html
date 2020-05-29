@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件处理</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <!-- <section>
+        <div id="app">
+            <button v-on:click="counter += 1">Add 1</button>
+            <p>The button above has been clicked {{ counter }} times.</p>
+        </div>
+        <script>
+            var vm = new Vue({
+                el: '#app',
+                data: {
+                    counter: 0
+                }
+            })
+        </script>
+    </section> -->
+
+    <!-- <section>
+        <div id="app">
+            <button v-on:click="greet">Greet</button>
+        </div>
+        <script>
+            var vm = new Vue({
+                el: '#app',
+                data: {
+                    name: 'Vue.js'
+                },
+                methods: {
+                    greet: function(event){
+                        alert('Hello ' + this.name);
+                        if (event) {
+                            alert(event.target.tagName)
+                        }
+                    }
+                }
+            })
+        </script>
+    </section> -->
+
+    <section>
+        <div id="app">
+            <button v-on:click="say('hi')">Say hi</button>
+            <button v-on:click="say('what')">Say what</button>
+        </div>
+        <script>
+            var vm = new Vue({
+                el: '#app',
+                data: {
+                },
+                methods: {
+                    say(message){
+                        alert(message);
+                    }
+                }
+            })
+        </script>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>列表渲染</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <!-- <section>
+        <div id="app">
+            <li v-for="item in items" :key="item.message">
+                {{ item.message }}
+            </li>
+        </div>
+        <script>
+            var vm = new Vue({
+                el: '#app',
+                data: {
+                    items: [
+                        { message: 'Foo' },
+                        { message: 'Bar' }
+                    ]
+                }
+            })
+        </script>
+    </section> -->
+
+    <!-- <section>
+        <div id="app">
+            <li v-for="(item,index) in items" :key="item.message">
+                {{parentMessage}} - {{index}} - {{ item.message }}
+            </li>
+        </div>
+        <script>
+            var vm = new Vue({
+                el: '#app',
+                data: {
+                    parentMessage: 'Parent',
+                    items: [
+                        { message: 'Foo' },
+                        { message: 'Bar' }
+                    ]
+                }
+            })
+        </script>
+    </section> -->
+
+    <section>
+        <div id="app">
+            <li v-for="(value, name, index) in object">
+                {{ index }}. {{ name }}: {{ value }}
+            </li>
+        </div>
+        <script>
+            var vm = new Vue({
+                el: '#app',
+                data: {
+                    object: {
+                        title: 'How to do lists in Vue',
+                        author: 'Jane Doe',
+                        publishedAt: '2016-04-10'
+                    }
+                }
+            })
+        </script>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>class与style绑定</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <!-- 对象语法 -->
+    <!-- <section>
+        <div id="app">
+            <div class="static" v-bind:class="{ active: isActive, 'text-danger': hasError }"></div>
+            <div v-bind:class="classObject"></div>
+        </div>
+        <script>
+            var vm = new Vue({
+                el: '#app',
+                data: {
+                    // isActive: true,
+                    // hasError: false
+                    // classObject: {
+                    //     active: true,
+                    //     'text-danger': false
+                    // }
+                    isActive: true,
+                    error: null
+                },
+                computed: {
+                    classObject: function(){
+                        return {
+                            active: this.isActive && !this.error,
+                            'text-danger': this.error && this.error.type === 'fatal'
+                        }
+                    }
+                }
+            })
+        </script>
+    </section> -->
+
+    <!-- 数组语法 -->
+    <!-- <section>
+        <div id="app">
+            <div v-bind:class="[activeClass, errorClass]"></div>
+            <div v-bind:class="[isActive ? activeClass : '', errorClass]"></div>
+        </div>
+        <script>
+            var vm = new Vue({
+                el: '#app',
+                data: {
+                    isActive: true,
+                    activeClass: 'active',
+                    errorClass: 'text-danger'
+                }
+            })
+        </script>
+    </section> -->
+
+    <!-- 绑定内联样式 -->
+    <!-- <section>
+        <div id="app">
+            <div v-bind:style="{color: activeColor, fontSize: fontSize + 'px'}"></div>
+        </div>
+        <script>
+            var vm = new Vue({
+                el: '#app',
+                data: {
+                    activeColor: 'red',
+                    fontSize: 30
+                }
+            })
+        </script>
+    </section> -->
+    <!-- <section>
+        <div id="app">
+            <div v-bind:style="{color: activeColor, fontSize: fontSize + 'px'}"></div>
+        </div>
+        <script>
+            var vm = new Vue({
+                el: '#app',
+                data: {
+                    activeColor: 'red',
+                    fontSize: 30
+                }
+            })
+        </script>
+    </section> -->
+
+    <section>
+        <div id="app">
+            <div v-bind:style="styleObject">我是一段文字</div>
+        </div>
+        <script>
+            var vm = new Vue({
+                el: '#app',
+                data: {
+                    styleObject: {
+                        color: 'red',
+                        fontSize: '13px'
+                    }
+                }
+            })
+        </script>
+    </section>
+</body>
+</html>

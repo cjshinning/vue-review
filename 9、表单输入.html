@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单输入</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <!-- <section>
+        <div id="app">
+            <input v-model="message" placeholder="edit me">
+            <p>Message is: {{message}}</p>
+        </div>
+        <script>
+            var vm = new Vue({
+                el: '#app',
+                data: {
+                    message: ''
+                }
+            })
+        </script>
+    </section> -->
+
+    <!-- <section>
+        <div id="app">
+            <span>Multiline message is:</span>
+            <p style="white-space: pre-line;">{{ message }}</p>
+            <textarea v-model="message" placeholder="add multiple lines"></textarea>
+        </div>
+        <script>
+            var vm = new Vue({
+                el: '#app',
+                data: {
+                    message: ''
+                }
+            })
+        </script>
+    </section> -->
+
+    <!-- <section>
+        <div id="app">
+            <input type="checkbox" id="checkbox" v-model="checked"/>
+            <label for="checkbox">{{checked}}</label>    
+        </div>
+        <script>
+            var vm = new Vue({
+                el: '#app',
+                data: {
+                    checked: false
+                }
+            })
+        </script>
+    </section> -->
+
+    <!-- <section>
+        <div id="app">
+            <input type="checkbox" id="jack" value="Jack" v-model="checkedNames"/>
+            <label for="jack">Jack</label>
+            <input type="checkbox" id="john" value="John" v-model="checkedNames"/>
+            <label for="john">John</label>
+            <input type="checkbox" id="mike" value="Mike" v-model="checkedNames"/>
+            <label for="mike">Mike</label>
+            <br/>
+            <span>Checked names: {{checkedNames}}</span>
+        </div>
+        <script>
+            var vm = new Vue({
+                el: '#app',
+                data: {
+                    checkedNames: []
+                }
+            })
+        </script>
+    </section> -->
+
+    <!-- <section>
+        <div id="app">
+            <input type="radio" id="one" value="One" v-model="picked"/>
+            <label for="one">One</label>
+            <br/>
+            <input type="radio" id="two" value="Two" v-model="picked"/>
+            <label for="two">Two</label>
+            <br/>
+            <span>Picked: {{picked}}</span>
+        </div>
+        <script>
+            var vm = new Vue({
+                el: '#app',
+                data: {
+                    picked: ''
+                }
+            })
+        </script>
+    </section> -->
+
+    <!-- <section>
+        <div id="app">
+            <select v-model="selected">
+                <option disabled value="">请选择</option>
+                <option>A</option>
+                <option>B</option>
+                <option>C</option>
+            </select>
+            <span>Selected: {{selected}}</span>
+        </div>
+        <script>
+            var vm = new Vue({
+                el: '#app',
+                data: {
+                    selected: ''
+                }
+            })
+        </script>
+    </section> -->
+
+    <!-- <section>
+        <div id="app">
+            <select v-model="selected" multiple style="width: 50px;">
+                <option>A</option>
+                <option>B</option>
+                <option>C</option>
+            </select>
+            <span>Selected: {{selected}}</span>
+        </div>
+        <script>
+            var vm = new Vue({
+                el: '#app',
+                data: {
+                    selected: ''
+                }
+            })
+        </script>
+    </section> -->
+
+    <section>
+        <div id="app">
+            <select v-model="selected">
+                <option v-for="option in options" v-bind:value="option.value">
+                    {{ option.text }}
+                </option>
+            </select>
+            <span>Selected: {{selected}}</span>
+        </div>
+        <script>
+            var vm = new Vue({
+                el: '#app',
+                data: {
+                    selected: 'A',
+                    options: [
+                        { text: 'One', value: 'A' },
+                        { text: 'Two', value: 'B' },
+                        { text: 'Three', value: 'C' }
+                    ]
+                }
+            })
+        </script>
+    </section>
+
+</body>
+</html>
